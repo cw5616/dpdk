@@ -94,6 +94,10 @@ New Features
   The built-in help text function is available as a public function which can be reused by custom functions,
   if so desired.
 
+* **Updated the QuickAssist Technology (QAT) crypto PMD.**
+
+  * Added SM2 encryption and decryption algorithms.
+
 
 Removed Items
 -------------
