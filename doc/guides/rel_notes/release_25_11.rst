@@ -107,6 +107,27 @@ New Features
   The built-in help text function is available as a public function which can be reused by custom functions,
   if so desired.
 
+* **Added ethdev API to get link connector.**
+
+  * Added API to report type of link connector for a port.
+    The following connectors are enumerated:
+
+   * None
+   * Twisted Pair
+   * Attachment Unit Interface (AUI)
+   * Optical Fiber Link
+   * BNC
+   * Direct Attach Copper
+   * XFI, SFI
+   * Media Independent Interface (MII)
+   * SGMII, QSGMII
+   * XLAUI, GAUI, AUI, CAUI, LAUI
+   * SFP, SFP+, SFP28, SFP-DD
+   * QSFP, QSFP+, QSFP28, QSFP56, QSFP-DD
+   * OTHER
+
+    By default, it reports ``RTE_ETH_LINK_CONNECTOR_NONE``
+    unless driver specifies it.
 
 Removed Items
 -------------
@@ -172,6 +193,9 @@ ABI Changes
 
 * eal: The structure ``rte_mp_msg`` alignment has been updated to 8 bytes to limit unaligned
   accesses in messages payload.
+
+* ethdev: Added ``link_connector`` field to ``rte_eth_link`` structure
+  to report type of link connector for a port.
 
 * stack: The structure ``rte_stack_lf_head`` alignment has been updated to 16 bytes
   to avoid unaligned accesses.
