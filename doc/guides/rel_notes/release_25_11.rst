@@ -129,6 +129,11 @@ New Features
     By default, it reports ``RTE_ETH_LINK_CONNECTOR_NONE``
     unless driver specifies it.
 
+* **Added Huawei hinic3 net driver.**
+
+  * Added network driver for the Huawei SPx series Network Adapters.
+
+
 Removed Items
 -------------
 
